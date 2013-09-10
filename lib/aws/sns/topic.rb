@@ -262,7 +262,7 @@ module AWS
 
         message = { :default => default_message }
 
-        [:http, :https, :email, :email_json, :sqs].each do |protocol|
+        [:http, :https, :email, :email_json, :sqs, :GCM].each do |protocol|
           if options[protocol]
             message[protocol.to_s.gsub(/_/, '-')] = options[protocol]
           end
